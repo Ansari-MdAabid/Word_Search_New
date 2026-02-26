@@ -312,8 +312,46 @@ class _EnhancedSplashScreenState extends State<EnhancedSplashScreen>
                 ),
               ),
             ),
+            // Bottom logos section
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: _buildBottomLogos(),
+            ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildBottomLogos() {
+    return Container(
+      color: Colors.white,
+      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Expanded(
+            flex: 3,
+            child: Image.asset(
+              'assets/sounds/darshan_logo.jpeg',
+              height: 50,
+              fit: BoxFit.contain,
+              alignment: Alignment.centerLeft,
+            ),
+          ),
+          const SizedBox(width: 20),
+          Expanded(
+            flex: 2,
+            child: Image.asset(
+              'assets/sounds/ased_logo.jpeg',
+              height: 50,
+              fit: BoxFit.contain,
+              alignment: Alignment.centerRight,
+            ),
+          ),
+        ],
       ),
     );
   }
